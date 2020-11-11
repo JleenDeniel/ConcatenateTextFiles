@@ -13,7 +13,7 @@ import java.util.Date;
 public class ConcatenatorTxtFiles {
     public static void concatenate(ArrayList<File> files) throws IOException {
         Date date = new Date();
-        File result = new File("src/results/result" + date + ".txt");
+        File result = new File("src/results/result" + date.getTime() + ".txt");
         if(!result.exists()) {
             if (!result.createNewFile()) {
                 System.out.println("error");
